@@ -24,7 +24,7 @@ restore_error_handler();
 
 
 
-$container = id(new Nette\Config\Configurator)->setTempDirectory(TEMP_DIR)->createContainer();
+$container = id(new Nette\DI\Configurator)->setTempDirectory(TEMP_DIR)->createContainer();
 
 $template = new FileTemplate(__DIR__ . '/templates/xml.latte');
 $template->registerFilter(new Latte\Engine);

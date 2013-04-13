@@ -19,7 +19,7 @@ require __DIR__ . '/Template.inc';
 
 
 
-$container = id(new Nette\Config\Configurator)->setTempDirectory(TEMP_DIR)->createContainer();
+$container = id(new Nette\DI\Configurator)->setTempDirectory(TEMP_DIR)->createContainer();
 
 $template = new FileTemplate(__DIR__ . '/templates/ical.latte');
 $template->registerHelper('escape', 'Nette\Templating\Helpers::escapeICal');

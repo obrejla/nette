@@ -27,7 +27,7 @@ class NetteLoader extends AutoLoader
 
 	/** @var array */
 	public $renamed = array(
-		'Nette\Configurator' => 'Nette\Config\Configurator',
+		'Nette\Configurator' => 'Nette\DI\Configurator',
 		'Nette\Http\User' => 'Nette\Security\User',
 		'Nette\Templating\DefaultHelpers' => 'Nette\Templating\Helpers',
 		'Nette\Latte\ParseException' => 'Nette\Latte\CompileException',
