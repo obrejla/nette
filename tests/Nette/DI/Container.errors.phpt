@@ -18,13 +18,9 @@ require __DIR__ . '/../bootstrap.php';
 $service = new stdClass;
 $container = new Container;
 
-Assert::exception(function() use ($container, $service) {
-	$container->addService(NULL, $service);
-}, 'Nette\InvalidArgumentException', 'Service name must be a non-empty string, NULL given.');
-
 Assert::exception(function() use ($container) {
 	$container->addService('one', NULL);
-}, 'Nette\InvalidArgumentException', 'Invalid callback.');
+}, 'Nette\InvalidArgumentException', 'Service must be a object, NULL given.');
 
 Assert::exception(function() use ($container) {
 	$container->getService('one');
